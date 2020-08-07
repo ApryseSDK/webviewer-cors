@@ -12,19 +12,19 @@ Before you begin, make sure your development environment includes [Node.js](http
 
 ## Install
 
-Clone the repository:
+Clone the repository
 
 ```
 git clone https://github.com/PDFTron/webviewer-cors.git
 ```
 
-Install React-TypeScript app:
+Install React-TypeScript app
 ```
 cd webviewer-cors/webviewer-app
 npm i
 ```
 
-Install WebViewer lib static server:
+Install WebViewer lib static server
 ```
 cd webviewer-cors/webviewer-lib
 npm i
