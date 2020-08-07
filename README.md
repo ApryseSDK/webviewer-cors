@@ -18,29 +18,30 @@ Clone the repository
 git clone https://github.com/PDFTron/webviewer-cors.git
 ```
 
-Install React-TypeScript app
-```
-cd webviewer-cors/webviewer-app
-npm i
-```
-
 Install WebViewer lib static server
 ```
 cd webviewer-cors/webviewer-lib
 npm i
 ```
 
-## Run
-
-Run React-TypeScript app:
+Install React-TypeScript app
 ```
 cd webviewer-cors/webviewer-app
-npm start
+npm i
 ```
+After the install completed, the `postinstall` will copy over WebViewer's lib folder to the static server under `public/lib`.
+
+## Run
 
 Run WebViewer lib static server:
 ```
 cd webviewer-cors/webviewer-lib
+npm start
+```
+
+Run React-TypeScript app:
+```
+cd webviewer-cors/webviewer-app
 npm start
 ```
 
