@@ -31,15 +31,23 @@ npm i
 ```
 After the install completed, the `postinstall` will copy over WebViewer's lib folder to the static server under `public/lib`.
 
+Inside of `webviewer-cors/webviewer-lib/lib/ui/configorigin.txt` add `http://localhost:3000` as well as any stagining or production environments to protect against [XSS attacks](https://www.pdftron.com/documentation/web/guides/config-files#using-a-config-file-when-the-path-is-on-another-domain).
+
+```
+# If the WebViewer lib folder is on another origin from your app then you will
+# need to include your app's origin here if you want to load a config file
+http://localhost:3000
+```
+
 ## Run
 
-Run WebViewer lib static server:
+Run WebViewer lib static server to serve WebViewer lib
 ```
 cd webviewer-cors/webviewer-lib
 npm start
 ```
 
-Run React-TypeScript app:
+Run React-TypeScript app
 ```
 cd webviewer-cors/webviewer-app
 npm start
