@@ -8,4 +8,5 @@ html, body, #root {
 
 .webviewer {
   flex: 1;
+  height: 100vh;
 }
