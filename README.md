@@ -2,7 +2,7 @@
 
 [WebViewer](https://www.pdftron.com/webviewer) is a powerful JavaScript-based PDF Library that's part of the [PDFTron PDF SDK](https://www.pdftron.com).
 
-This repo is specifically designed for any users interested how to serve WebViewer's lib from [a different domain](https://www.pdftron.com/documentation/web/guides/config-files/#using-a-config-file-when-the-path-is-on-another-domain).
+This repo is specifically designed for any users interested in how to serve WebViewer's lib from [a different domain](https://www.pdftron.com/documentation/web/guides/config-files/#using-a-config-file-when-the-path-is-on-another-domain).
 
 We recommend serving WebViewer lib on the same domain as the app itself for additional performance and security.
 
@@ -31,7 +31,7 @@ npm i
 ```
 After the install completed, the `postinstall` will copy over WebViewer's lib folder to the static server under `public/lib`.
 
-Inside of `webviewer-cors/webviewer-lib/lib/ui/configorigin.txt` add `http://localhost:3000` as well as any stagining or production environments to protect against [XSS attacks](https://www.pdftron.com/documentation/web/guides/config-files#using-a-config-file-when-the-path-is-on-another-domain).
+Inside of `webviewer-cors/webviewer-lib/lib/ui/configorigin.txt` add `http://localhost:3000` as well as any staging or production environments to protect against [XSS attacks](https://www.pdftron.com/documentation/web/guides/config-files#using-a-config-file-when-the-path-is-on-another-domain).
 
 ```
 # If the WebViewer lib folder is on another origin from your app then you will
@@ -57,7 +57,7 @@ npm start
 
 Since the WebViewer iframe is hosted on a different domain, to interact and use APIs, we have to utilize `postMessage`.
 
-The `config.js` and `App.tsx` are configured to communicate with each other and load a document, and use some of the APIs like adding a rectangle annotation on page 2 of the document.
+The `config.js` and `App.tsx` are configured to communicate with each other to load a document and use some of the APIs like adding a rectangle annotation on page 2 of the document.
 
 ## WebViewer APIs
 
