@@ -55,9 +55,13 @@ npm start
 
 ## Loading documents and interacting with WebViewer
 
-Since the WebViewer iframe is hosted on a different domain, to interact and use APIs, we have to utilize `postMessage`.
+Since the WebViewer iframe is hosted on a different domain, to interact and use APIs, we have to utilize [`postMessage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage).
 
 The `config.js` and `App.tsx` are configured to communicate with each other to load a document and use some of the APIs like adding a rectangle annotation on page 2 of the document.
+
+## Making changes
+
+If you make any changes to `config.js` make sure to restart the `webviewer-lib` http-server.
 
 ## WebViewer APIs
 
