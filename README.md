@@ -55,7 +55,9 @@ npm start
 
 ## Loading documents and interacting with WebViewer
 
+Since the WebViewer iframe is hosted on a different domain, to interact and use APIs, we have to utilize `postMessage`.
 
+The `config.js` and `App.tsx` are configured to communicate with each other and load a document, and use some of the APIs like adding a rectangle annotation on page 2 of the document.
 
 ## WebViewer APIs
 
