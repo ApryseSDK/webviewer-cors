@@ -19,10 +19,10 @@ function receiveMessage(event) {
     switch (event.data.type) {
       case 'OPEN_DOCUMENT_URL':
         const { url } = event.data;
-        event.target.readerControl.loadDocument(url);
+        event.target.instance.UI.loadDocument(url);
         break;
       case 'CLOSE_DOCUMENT':
-        event.target.readerControl.closeDocument();
+        event.target.instance.UI.closeDocument();
         break;
       default:
         break;

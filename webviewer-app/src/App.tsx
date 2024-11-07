@@ -6,7 +6,7 @@ function App() {
   const viewer = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    WebViewer(
+    WebViewer.Iframe(
       {
         path: 'http://localhost:8080/lib/',
         config: 'http://localhost:8080/config.js',
