@@ -31,8 +31,6 @@ npm i
 ```
 After the install completed, the `postinstall` will copy over WebViewer's lib folder to the static server under `public/lib`.
 
-Inside of `webviewer-cors/webviewer-lib/lib/ui/configorigin.txt` add `http://localhost:3000` as well as any staging or production environments to protect against [XSS attacks](https://docs.apryse.com/web/guides/config-files/#using-a-config-file-when-the-path-is-on-another-domain).
-
 ```
 # If the WebViewer lib folder is on another origin from your app then you will
 # need to include your app's origin here if you want to load a config file
