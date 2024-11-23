@@ -9,19 +9,26 @@ function App() {
     WebViewer(
       {
         path: 'http://localhost:8080/lib/',
-        config: 'http://localhost:8080/config.js',
       },
       viewer.current as HTMLDivElement,
-    );
-    
-    viewer?.current?.addEventListener('ready', () => {
-      const iframeWindow = viewer?.current?.querySelector('iframe')?.contentWindow;
-      setTimeout(() => {
-        iframeWindow?.postMessage({ 
-        type: 'OPEN_DOCUMENT_URL', 
-        url: 'https://pdftron.s3.amazonaws.com/downloads/pl/webviewer-demo.pdf' 
-      }, '*')}, 1000);
+    ).then((instance) => {
+      const url = 'https://pdftron.s3.amazonaws.com/downloads/pl/webviewer-demo.pdf';
+      instance.UI.loadDocument(url);
+
+      const { documentViewer, Annotations } = instance.Core;
+      documentViewer.addEventListener('documentLoaded', () => {
+        const annotManager = documentViewer.getAnnotationManager();
+        const rectangle = new Annotations.RectangleAnnotation();
+        rectangle.PageNumber = 2;
+        rectangle.X = 100;
+        rectangle.Y = 100;
+        rectangle.Width = 250;
+        rectangle.Height = 250;
+        rectangle.Author = annotManager.getCurrentUser();
+        annotManager.addAnnotation(rectangle);
+      });
     });
+
   }, []);
 
   return (

@@ -1,8 +1,8 @@
 # WebViewer - CORS - Loading WebViewer's lib from a different domain
 
-[WebViewer](https://www.pdftron.com/documentation/web/) is a powerful JavaScript-based PDF Library that's part of the [PDFTron PDF SDK](https://www.pdftron.com).
+[WebViewer](https://docs.apryse.com/web/) is a powerful JavaScript-based PDF Library that's part of the [Apryse SDK](https://apryse.com/).
 
-This repo is specifically designed for any users interested in how to serve WebViewer's lib from [a different domain](https://www.pdftron.com/documentation/web/guides/config-files/#using-a-config-file-when-the-path-is-on-another-domain).
+This repo is specifically designed for any users interested in how to serve WebViewer's lib from [a different domain](https://docs.apryse.com/web/guides/config-files/#using-a-config-file-when-the-path-is-on-another-domain).
 
 We recommend serving WebViewer lib on the same domain as the app itself for additional performance and security.
 
@@ -15,7 +15,7 @@ Before you begin, make sure your development environment includes [Node.js](http
 Clone the repository
 
 ```
-git clone https://github.com/PDFTron/webviewer-cors.git
+git clone https://github.com/ApryseSDK/webviewer-cors.git
 ```
 
 Install WebViewer lib static server
@@ -30,8 +30,6 @@ cd webviewer-cors/webviewer-app
 npm i
 ```
 After the install completed, the `postinstall` will copy over WebViewer's lib folder to the static server under `public/lib`.
-
-Inside of `webviewer-cors/webviewer-lib/lib/ui/configorigin.txt` add `http://localhost:3000` as well as any staging or production environments to protect against [XSS attacks](https://www.pdftron.com/documentation/web/guides/config-files#using-a-config-file-when-the-path-is-on-another-domain).
 
 ```
 # If the WebViewer lib folder is on another origin from your app then you will
@@ -65,13 +63,8 @@ If you make any changes to `config.js` make sure to restart the `webviewer-lib` 
 
 ## WebViewer APIs
 
-See [API documentation](https://www.pdftron.com/documentation/web/guides/ui/apis).
-
-## Contributing
-
-See [contributing](./CONTRIBUTING.md).
+See [API documentation](https://docs.apryse.com/api/web/global.html#WebViewer__anchor)
 
 ## License
 
 See [license](./LICENSE).
-![](https://onepixel.pdftron.com/webviewer-react-sample)

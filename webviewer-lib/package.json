@@ -4,7 +4,7 @@
   "description": "This is where WebViewer's lib would be served statically from",
   "main": "index.js",
   "scripts": {
-    "start": "http-server"
+    "start": "http-server --cors"
   },
   "author": "Andrey Safonov",
   "license": "ISC",
